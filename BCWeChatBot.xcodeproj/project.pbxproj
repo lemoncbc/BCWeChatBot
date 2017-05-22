@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EDEB0231ED2E7BA0094146F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDEB0221ED2E7BA0094146F /* Foundation.framework */; };
+		7EDEB02D1ED2E7BA0094146F /* BCWeChatBot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7EDEB02C1ED2E7BA0094146F /* BCWeChatBot.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7EDEB01F1ED2E7BA0094146F /* BCWeChatBot.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = BCWeChatBot.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EDEB0221ED2E7BA0094146F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7EDEB0271ED2E7BA0094146F /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		7EDEB0281ED2E7BA0094146F /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		7EDEB02A1ED2E7BA0094146F /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		7EDEB02B1ED2E7BA0094146F /* BCWeChatBot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BCWeChatBot-Prefix.pch"; sourceTree = "<group>"; };
+		7EDEB02C1ED2E7BA0094146F /* BCWeChatBot.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BCWeChatBot.mm; sourceTree = "<group>"; };
+		7EDEB0311ED2E7BA0094146F /* BCWeChatBot.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = BCWeChatBot.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/BCWeChatBot.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EDEB01B1ED2E7BA0094146F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EDEB0231ED2E7BA0094146F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EDEB0151ED2E7BA0094146F = {
+			isa = PBXGroup;
+			children = (
+				7EDEB0241ED2E7BA0094146F /* BCWeChatBot */,
+				7EDEB0211ED2E7BA0094146F /* Frameworks */,
+				7EDEB0201ED2E7BA0094146F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EDEB0201ED2E7BA0094146F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EDEB01F1ED2E7BA0094146F /* BCWeChatBot.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EDEB0211ED2E7BA0094146F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EDEB0221ED2E7BA0094146F /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EDEB0241ED2E7BA0094146F /* BCWeChatBot */ = {
+			isa = PBXGroup;
+			children = (
+				7EDEB02C1ED2E7BA0094146F /* BCWeChatBot.mm */,
+				7EDEB0251ED2E7BA0094146F /* Package */,
+				7EDEB0291ED2E7BA0094146F /* Supporting Files */,
+			);
+			path = BCWeChatBot;
+			sourceTree = "<group>";
+		};
+		7EDEB0251ED2E7BA0094146F /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				7EDEB0261ED2E7BA0094146F /* DEBIAN */,
+				7EDEB02E1ED2E7BA0094146F /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		7EDEB0261ED2E7BA0094146F /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				7EDEB0271ED2E7BA0094146F /* control.txt */,
+				7EDEB0281ED2E7BA0094146F /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		7EDEB0291ED2E7BA0094146F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EDEB02A1ED2E7BA0094146F /* PackageVersion.plist */,
+				7EDEB02B1ED2E7BA0094146F /* BCWeChatBot-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EDEB02E1ED2E7BA0094146F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7EDEB02F1ED2E7BA0094146F /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		7EDEB02F1ED2E7BA0094146F /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				7EDEB0301ED2E7BA0094146F /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		7EDEB0301ED2E7BA0094146F /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				7EDEB0311ED2E7BA0094146F /* BCWeChatBot.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7EDEB01C1ED2E7BA0094146F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7EDEB01E1ED2E7BA0094146F /* BCWeChatBot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EDEB0341ED2E7BA0094146F /* Build configuration list for PBXNativeTarget "BCWeChatBot" */;
+			buildPhases = (
+				7EDEB01A1ED2E7BA0094146F /* Sources */,
+				7EDEB01B1ED2E7BA0094146F /* Frameworks */,
+				7EDEB01C1ED2E7BA0094146F /* Headers */,
+				7EDEB01D1ED2E7BA0094146F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BCWeChatBot;
+			productName = BCWeChatBot;
+			productReference = 7EDEB01F1ED2E7BA0094146F /* BCWeChatBot.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EDEB0161ED2E7BA0094146F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					7EDEB01E1ED2E7BA0094146F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7EDEB0191ED2E7BA0094146F /* Build configuration list for PBXProject "BCWeChatBot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7EDEB0151ED2E7BA0094146F;
+			productRefGroup = 7EDEB0201ED2E7BA0094146F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EDEB01E1ED2E7BA0094146F /* BCWeChatBot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EDEB01D1ED2E7BA0094146F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EDEB01A1ED2E7BA0094146F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EDEB02D1ED2E7BA0094146F /* BCWeChatBot.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7EDEB0321ED2E7BA0094146F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		7EDEB0331ED2E7BA0094146F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		7EDEB0351ED2E7BA0094146F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BCWeChatBot/BCWeChatBot-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		7EDEB0361ED2E7BA0094146F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BCWeChatBot/BCWeChatBot-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EDEB0191ED2E7BA0094146F /* Build configuration list for PBXProject "BCWeChatBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EDEB0321ED2E7BA0094146F /* Debug */,
+				7EDEB0331ED2E7BA0094146F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EDEB0341ED2E7BA0094146F /* Build configuration list for PBXNativeTarget "BCWeChatBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EDEB0351ED2E7BA0094146F /* Debug */,
+				7EDEB0361ED2E7BA0094146F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EDEB0161ED2E7BA0094146F /* Project object */;
+}
