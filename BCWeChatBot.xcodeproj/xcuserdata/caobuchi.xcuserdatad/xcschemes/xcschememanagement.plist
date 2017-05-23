@@ -9,10 +9,30 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>WeChat.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>WeChatPlugin.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7EBD3CB31ED3F61600FF59DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7EDEB01E1ED2E7BA0094146F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7EDEB03C1ED303430094146F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

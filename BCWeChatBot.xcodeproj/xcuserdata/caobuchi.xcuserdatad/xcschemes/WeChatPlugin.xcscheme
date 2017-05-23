@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7EDEB01E1ED2E7BA0094146F"
-               BuildableName = "BCWeChatBot.dylib"
-               BlueprintName = "BCWeChatBot"
+               BlueprintIdentifier = "7EBD3CB31ED3F61600FF59DE"
+               BuildableName = "WeChatPlugin.dylib"
+               BlueprintName = "WeChatPlugin"
                ReferencedContainer = "container:BCWeChatBot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7EDEB01E1ED2E7BA0094146F"
-            BuildableName = "BCWeChatBot.dylib"
-            BlueprintName = "BCWeChatBot"
+            BlueprintIdentifier = "7EBD3CB31ED3F61600FF59DE"
+            BuildableName = "WeChatPlugin.dylib"
+            BlueprintName = "WeChatPlugin"
             ReferencedContainer = "container:BCWeChatBot.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7EDEB01E1ED2E7BA0094146F"
-            BuildableName = "BCWeChatBot.dylib"
-            BlueprintName = "BCWeChatBot"
+            BlueprintIdentifier = "7EBD3CB31ED3F61600FF59DE"
+            BuildableName = "WeChatPlugin.dylib"
+            BlueprintName = "WeChatPlugin"
             ReferencedContainer = "container:BCWeChatBot.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
