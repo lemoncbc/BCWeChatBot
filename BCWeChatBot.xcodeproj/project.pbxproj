@@ -671,7 +671,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.xin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b6d03c85-4c38-4bb6-aaff-1652e9b622a9";
+				PROVISIONING_PROFILE = "54cd6925-1ce2-4584-824b-0aa2459cc32e";
 				PROVISIONING_PROFILE_SPECIFIER = "lemon.*";
 			};
 			name = Debug;
@@ -731,6 +731,7 @@
 				7EBD3CC51ED3F61600FF59DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EDEB0191ED2E7BA0094146F /* Build configuration list for PBXProject "BCWeChatBot" */ = {
 			isa = XCConfigurationList;

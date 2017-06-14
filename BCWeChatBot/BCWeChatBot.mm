@@ -45,7 +45,9 @@ id messageMgr = [mgr performSelector:@selector(getService:) withObject:mgrClass]
 @end
 
 static NSMutableDictionary *_dict;
+static NSMutableDictionary *_subDict;
 static NSString *_plistPath;
+static BOOL canReply;
 
 
 CHDeclareClass(WCDeviceStepObject);
@@ -95,31 +97,34 @@ CHMethod(2,void, CMessageMgr, AsyncOnAddMsg, id, arg1, MsgWrap, id, arg2){
                 NSRange range = [m_nsContent rangeOfString:@"set"];
                 
                 if (range.length == 0) {
-                    if ([m_nsContent isEqualToString:@"@Bot"]) {
-                        replyMsg(@"不要艾特我,不存在的");
-                        return;
-                    }
-                    if ([m_nsContent rangeOfString:@"@"].length > 0) {
-                        replyMsg(@"艾特艾特出来啦");
-                        return;
-                    }
-                    if (_dict[m_nsContent]) {
-                        
-                        replyMsg(_dict[m_nsContent]);
-                        
-                    } else {
-                        
-                        for (NSString *key in _dict.allKeys) {
+                    if (canReply) {
+                    
+                        if ([m_nsContent isEqualToString:@"@Bot"]) {
+                            replyMsg(@"不要艾特我,不存在的");
+                            return;
+                        }
+//                        if ([m_nsContent rangeOfString:@"@"].length > 0) {
+//                            replyMsg(m_nsContent);
+//                            return;
+//                        }
+                        if (_dict[m_nsFromUsr][m_nsContent]) {
                             
+                            replyMsg(_dict[m_nsFromUsr][m_nsContent]);
                             
-                            if ([m_nsContent rangeOfString:key].length >0) {
+                        } else {
+                            
+                            for (NSString *key in _dict.allKeys) {
                                 
-                                NSString *keyStr = [m_nsContent substringWithRange:[m_nsContent rangeOfString:key]];
                                 
-                                replyMsg(_dict[keyStr]);
-                                return;
-                            } 
-                            
+                                if ([m_nsContent rangeOfString:key].length >0) {
+                                    
+                                    NSString *keyStr = [m_nsContent substringWithRange:[m_nsContent rangeOfString:key]];
+                                    
+                                    replyMsg(_dict[m_nsFromUsr][keyStr]);
+                                    return;
+                                }
+                                
+                            }
                         }
                     }
 
@@ -130,17 +135,28 @@ CHMethod(2,void, CMessageMgr, AsyncOnAddMsg, id, arg1, MsgWrap, id, arg2){
                     if (botLanguageConfig.count == 3) {
                         if ([botLanguageConfig[2] isEqualToString:@"nil"]) {
                             
-                            [_dict removeObjectForKey:botLanguageConfig[1]];
+                            [_dict[m_nsFromUsr] removeObjectForKey:botLanguageConfig[1]];
                             
                         }else
                         {
-                            _dict[botLanguageConfig[1]] = botLanguageConfig[2];
+                            NSMutableDictionary *sDict;
+                            if (_dict[m_nsFromUsr]) {
+                                
+                                sDict = _dict[m_nsFromUsr];
+                            }else
+                            {
+                                sDict = [[NSMutableDictionary alloc] init];
+                            }
+                            
+                            sDict[botLanguageConfig[1]] = botLanguageConfig[2];
+                            _dict[m_nsFromUsr] = sDict;
                             
                         }
                         
                         if ([_dict writeToFile:_plistPath atomically:YES]) {
                             
-                            replyMsg(@"设置成功");
+                            NSString *str = [NSString stringWithFormat:@"【%@】\n设置成功",m_nsContent];
+                            replyMsg(str);
                         } else
                         {
                             replyMsg(@"设置失败");
@@ -152,6 +168,17 @@ CHMethod(2,void, CMessageMgr, AsyncOnAddMsg, id, arg1, MsgWrap, id, arg2){
                     }
                 }
                 
+                
+            }else
+            {
+                if ([m_nsContent isEqualToString:@"startReply"]) {
+                    
+                    canReply = YES;
+                    
+                }else if ([m_nsContent isEqualToString:@"stopReply"])
+                {
+                    canReply = NO;
+                }
                 
             }
             
@@ -183,11 +210,14 @@ __attribute__((constructor)) static void entry(){
     if (![[NSFileManager defaultManager] fileExistsAtPath:_plistPath]) {
         
         _dict = [[NSMutableDictionary alloc] init];
+        _subDict = [[NSMutableDictionary alloc] init];
     }else
     {
         _dict = [NSMutableDictionary dictionaryWithContentsOfFile:_plistPath];
+        _subDict = [[NSMutableDictionary alloc] init];
         if (!_dict) {
         _dict = [[NSMutableDictionary alloc] init];
+        _subDict = [[NSMutableDictionary alloc] init];
         }
     }
     
